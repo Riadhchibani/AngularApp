@@ -1,0 +1,77 @@
+<div id="header"></div>
+<div class="container">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- pwd Column -->
+    <ng-container matColumnDef="pwd">
+      <th mat-header-cell *matHeaderCellDef> pwd </th>
+      <td mat-cell *matCellDef="let element"> {{element.pwd}} </td>
+    </ng-container>
+
+    <!-- Age Column -->
+    <ng-container matColumnDef="age">
+      <th mat-header-cell *matHeaderCellDef> Age </th>
+      <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+    </ng-container>
+
+    <!-- Edit Column -->
+    <ng-container matColumnDef="edit">
+      <th mat-header-cell *matHeaderCellDef> Edit / Delete</th>
+      <td mat-cell *matCellDef="let element">
+        <app-block-icon typeIcon="edit" ObjectId="{{element.id}}" ObjectName="{{element.name}}" Objectpwd="{{element.pwd}}" ObjectAge="{{element.age}}"></app-block-icon>
+        <app-block-icon typeIcon="delete"></app-block-icon>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+</div>
+<br>
+<div class="container">
+<table>
+  <th scope="row">
+    <mat-form-field class="example-full-width">
+      <mat-label>add id</mat-label>
+      <input matInput placeholder="add id">
+    </mat-form-field>
+  </th>
+  <!---->
+  <td>
+    <mat-form-field class="example-full-width">
+      <mat-label>add name</mat-label>
+      <input matInput placeholder="add name">
+    </mat-form-field>
+  </td>
+  <!---->
+  <td>
+    <mat-form-field class="example-full-width">
+      <mat-label>add pwd</mat-label>
+      <input matInput placeholder="add pwd">
+    </mat-form-field>
+  </td>
+  <!---->
+  <td>
+    <mat-form-field class="example-full-width">
+      <mat-label>add Age</mat-label>
+      <input matInput placeholder="add Age">
+    </mat-form-field>
+  </td>
+  <td>
+    <app-block-icon typeIcon="add_circle"></app-block-icon>
+  </td>
+</table>
+</div>
