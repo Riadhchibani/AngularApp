@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Omidyar",
+        "pwd": "Ebay123",
+        "age": 40
+    },
+    {
+        "id": 2,
+        "name": "Thiel",
+        "pwd": "paypal123",
+        "age": 35
+    },
+    {
+        "id": 3,
+        "name": "levchin",
+        "pwd": "paypal123",
+        "age": 37   
+    }
+]
